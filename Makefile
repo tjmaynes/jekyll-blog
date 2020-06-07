@@ -16,7 +16,7 @@ build:
 	bundle exec jekyll build
 
 edit:
-	bundle exec jekyll serve --host=$(HOST) --port=80 -w
+	bundle exec jekyll serve --host=$(HOST) --port=80 --watch --trace
 
 preview: build 
 	$(call execute_script,$@) \

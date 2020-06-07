@@ -11,7 +11,8 @@ main()
     gem install bundler
   fi
 
-  bundle install --path vendor/bundle
+  bundle config set path vendor/bundle 
+  bundle install
 }
 
 main

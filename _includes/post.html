@@ -1,0 +1,14 @@
+<section class="post">
+  <div class="post-header">
+    <div class="post-header-info">
+      {% include header-page.html %}
+      <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    </div>
+    <span class="author"><a href="https://www.twitter.com/tjmaynes"
+        target="_blank">{{ site.author }}</a></span>
+  </div>
+  <div class="post-content">
+    {{ content }}
+    <article id="date">[{{ page.date | date: "%d %B %Y" }}]</article>
+  </div>
+</section>
