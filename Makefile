@@ -2,6 +2,16 @@ BLOG_DIRECTORY              = $(PWD)
 BLOG_PUBLISHING_DIRECTORY   = $(BLOG_DIRECTORY)/public
 REPO                        = git@github.com:tjmaynes/blog.git
 TARGET_BRANCH               = gh-pages
+JEKYLL_VERSION              = 4.1.0
+
+define jekyll_run
+docker run --rm \
+  --publish 4000:4000 \
+  --volume="$(PWD):/srv/jekyll" \
+  --volume="$(PWD)/vendor/bundle:/usr/local/bundle" \
+  -it jekyll/jekyll:$(JEKYLL_VERSION) \
+  jekyll ${1}
+endef
 
 define execute_script
 chmod +x ./scripts/${1}.sh
@@ -13,14 +23,14 @@ install_dependencies:
 
 .PHONY: build
 build:
-	bundle exec jekyll build
+	$(call jekyll_run,build)
 
 edit:
-	bundle exec jekyll serve --host=$(HOST) --port=80 --watch --trace
+	$(call jekyll_run,serve --watch --trace)
 
 preview: build 
 	$(call execute_script,$@) \
-		$(BLOG_PUBLISHING_DIRECTORY)	
+	$(BLOG_PUBLISHING_DIRECTORY)	
 
 deploy:
 	$(call execute_script,$@) \

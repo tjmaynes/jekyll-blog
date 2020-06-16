@@ -6,7 +6,7 @@
 
 - [GNU Make](https://www.gnu.org/software/make/)
 - [Git](https://git-scm.com)
-- [Ruby](https://www.ruby-lang.org/en/)
+- [Docker](https://www.docker.com)
 
 ## Usage
 
