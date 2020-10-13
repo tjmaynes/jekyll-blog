@@ -1,9 +1,9 @@
-===
-layout: page
+---
+layout: post 
 title: "Test-Driven Learning"
 description: "In this blog post I'll be discussing a strategy I use for rapidly learning a new programming language/library/tool that utilizes using a testing framework as my 'learning feedback' tool."
 draft: true
-===
+---
 I just wanted to discuss an approach I use to learn new programming languages, runtimes, libraries and/or implementing abstract concepts. The approach is essentially test-driven development, but instead of writing tests as a feedback mechanism for refactoring code, we are writing tests as a feedback mechanism for learning. Let's call this "Test-Driven Learning" for now. This test-driven learning approach gives us a quick feedback loop (via test-runner) and sandbox environment (via test-suite), that we can use for rapidly learning new concepts.
 
 This feedback loop boils down to: `Hypothesize -> Test -> Evaluate -> Repeat`.

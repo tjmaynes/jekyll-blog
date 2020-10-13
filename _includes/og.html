@@ -1,0 +1,11 @@
+<meta property="og:title" content="{{page.title}}" />
+{% if page.title %}<meta property="og:type" content="article" />
+<meta property="og:url" content="{{page.url}}" />
+{% if page.img %}<meta property="og:image" content="{{page.img}}" />
+{% else %}<meta property="og:image" content="ios_splash.png " />
+{% endif %}
+{% else %}
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{site.url}}" />
+<meta property="og:image" content="ios_splash.png" />
+{% endif %}

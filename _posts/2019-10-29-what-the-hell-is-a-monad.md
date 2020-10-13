@@ -1,9 +1,9 @@
-===
-layout: page
+---
+layout: post 
 title: "What the hell is a monad"
 description: "In this blog post we'll be discussing an analogy I use to depict what a monad is and an example of the Option monad in a real world programming scenario."
 draft: false 
-===
+---
 I've been using the Either and Option monads on various projects (in different runtimes) over the last couple of years. I like utilizing these monads as a way of handle errors from external systems. However, when it comes time to introducing someone new to these monads, I'm unable to describe what makes a monad a `monad`. However, after doing some research I found an analogy that encapsulates what I believe to be the spirit of what makes a monad a `monad`.
 
 > *A monad is an abstract data type that enables programmers to chain complex, nondeterministic operations in a readable way.*

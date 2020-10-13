@@ -1,9 +1,9 @@
-===
-layout: page
+---
+layout: post
 title: "Drawing Shapes with NAO"
 description: "In this blog post we'll discusses how to 'teach' the NAO robot to draw shapes that it 'sees' using NAOqi (NAO SDK), Python and OpenCV."
 draft: false 
-===
+---
 This blog post discusses how to "teach" the NAO robot to draw shapes that it "sees" using NAOqi, Python and OpenCV. By the end of this blog post, you should have a better understanding of Canny Edge Detection and using Pixel Position interpolation to map a virual space to Forward Kinematics.
 
 ![1](/images/blog/nao-bot-1.png)

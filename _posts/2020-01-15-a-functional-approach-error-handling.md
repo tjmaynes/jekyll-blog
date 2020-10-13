@@ -1,10 +1,9 @@
-===
-layout: page
+---
+layout: post 
 title: "A Functional Approach: Error Handling"
 description: "In this blog post we'll be discussing some object-oriented error handling strategies that will iterate into the Either monad."
 draft: true
-===
-
+---
 Recently, I've been asking myself, "How can this function fail?" This question has led to a different style of programming that I've chosen to utilize in various problem solving scenarios (mostly around integrations with external systems). Let's take a look at the following function written in [kotlin](https://kotlinlang.org/docs/reference):
 
 ```kotlin

@@ -7,6 +7,8 @@ url: "https://tjmaynes.com"
 twitter_username: tjmaynes
 github_username:  tjmaynes
 
+permalink: /post/:title:output_ext
+
 plugins:
   - jekyll-feed
 
@@ -18,3 +20,5 @@ exclude:
   - vendor
   - README.md
   - .gitignore
+  - Makefile
+  - scripts/

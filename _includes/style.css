@@ -1,6 +1,26 @@
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/public/fonts/inconsolata-regular.eot') format('embedded-opentype'),
+    url('/public/fonts/inconsolata-regular.eot?#iefix') format('embedded-opentype'),
+    url('/public/fonts/inconsolata-regular.woff') format('woff'),
+    url('/public/fonts/inconsolata-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/public/fonts/inconsolata-bold.eot') format('embedded-opentype'),
+    url('/public/fonts/inconsolata-bold.eot?#iefix') format('embedded-opentype'),
+    url('/public/fonts/inconsolata-bold.woff') format('woff'),
+    url('/public/fonts/inconsolata-bold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: 800;
+}
+
 * {
-  padding:0px;
-  margin:0px;
+    padding:0px;
+    margin:0px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -16,80 +36,196 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
 body {
-  font: 16px/1.5 "Inconsolata", "Lucida Sans Typewriter", "Lucida Console", Monaco, monospace;
-  background-color: #fbfbfb;
-  color: #0e0e0e;
+    font: 16px/1.5 "Inconsolata", "Lucida Sans Typewriter", "Lucida Console", Monaco, monospace;
 }
 
+h1 { line-height: 1.2; font-size: 1.5em; }
+h2 { font-size: 1.3em; padding: 10px 0 4px 0; }
+h3 { font-size: 1.1em; }
+
+hr { margin: 10px 0; }
+
 p {
-  font-size: 1.3em;
-  line-height: 1.3;
-  text-align: left;  
-  padding-bottom: 8px;
+    line-height: 1.5;
+    text-align: left;
+    padding-bottom: 8px;
+}
+p:last-child { padding-bottom: 5px }
+
+a, a:hover {
+    text-decoration: underline;
+}
+
+blockquote {
+    margin: 10px 0 14px 0;
+    padding: 0 0 0 20px;
+    font-style: italic;
+}
+
+.content-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 14px 12px 20px 12px;
+}
+
+.content-header {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #586e75;
+}
+
+.content-header nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    max-height: 25px;
+}
+
+.content-header img {
+    max-height: 25px;
+    max-width: 27px;
+}
+
+.content-header nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.content-header nav ul li {
+    display: flex;
+    padding-right: 13px;
+}
+
+.content-header nav ul li:last-child {
+    padding-right: 0;
+}
+
+.content-header a, .content-header a:hover {
+    display: flex;
+    align-items: flex-end;
+}
+
+.content-footer {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 15px 0 12px 0;
+}
+
+.archive {
+    padding: 8px 0;
+}
+
+.post {
+    padding: 10px 0;
+}
+
+.post:last-child {
+    border-bottom: none;
+}
+
+.post header {
+    padding-bottom: 8px;
+}
+
+.post ol, .post ul {
+    margin: 0 0 10px;
+    margin-left: 20px;
+}
+
+.post ul {
+    list-style-type: circle;
+    padding: 0px;
+}
+
+.post ol {
+    list-style-type: decimal;
+    padding: 0px;
+}
+
+.post li {
+    font-size: 16px;
+}
+
+.post img {
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.pagination {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.archive-item {
+    list-style-type: none;
+    text-align: left;
+}
+
+.footer-menu {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.footer-menu ul {
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.footer-menu ul:last-child {
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+
+.footer-menu ul li {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-right: 18px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Color */
+
+body {
+    background-color: #fff;
+    color: #586e75;
+}
+
+h1, h2, h3 {
+    color: #268bd2;
 }
 
 a, a:hover {
-  text-decoration: none;
-  font-weight: bold;
+    color: #268bd2;
 }
 
-header, footer {
-  margin: 2.3em;
+blockquote {
+    border-left: 1px solid #e5e5e5;
 }
 
-section {
-  margin: 2.5em 2.3em 3.4em 2.5em;
-}
+.content-footer { border-top: 2px solid #586e75; }
 
-code, pre {
-  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
-  color:#333;
-  font-size:12px;
-}
-
-.wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 24px 18px;
-}
-
-.about p {
-  text-align: center;
-  padding-bottom: 22px;
-}
-
-.about p:first-child {
-  font-size: 1.5em;
-}
-
-.about a, .about a:hover {
-  font-weight: bold;
-  color: #6cc644;
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-}
-
-.social ul {
-  display: flex;
-  list-style-type: none;
-}
-
-.social ul li {
-  padding: 14px;
-  font-size: 1.5em;
-}
-
-.social ul li:first-child {
-  padding: 14px 14px 14px 0;
-}
+{% include syntax_highlighting.css %}

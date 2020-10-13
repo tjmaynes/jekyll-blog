@@ -1,10 +1,9 @@
-===
-layout: page
+---
+layout: post 
 title: "SQL Murder Mystery"
 description: "In this blog post I'll be talking briefly about a fun game I found via Hackernews called SQL Murder Mystery."
 draft: false 
-===
-
+---
 Normally when learning a new programming language, library, or concept, I'll fire up an editor and write a set of tests to drive out the knowledge that I am seeking. For a while now, I've wanted to learn more SQL but haven't made time to do so. Luckily this [game](https://news.ycombinator.com/item?id=21799988), called SQL Murder Mystery, showed up on Hackernews one cold winter morning.
 
 [SQL Murder Mystery](https://mystery.knightlab.com/) utilizes your SQL querying abilities to solve a "whodunnit" murder mystery with only a single clue to start from. To solve these problems you'll need to write SQLite queries, which I have some decent CRUD knowledge of, as it is the SQL language of choice for the game. I had a lot of fun playing this game and wish more games like this were created for developers.
